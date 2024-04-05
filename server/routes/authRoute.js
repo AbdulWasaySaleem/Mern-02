@@ -10,7 +10,6 @@ import {
 } from "../controllers/authController.js";
 import { isAdmin, requireSignIn } from "../middlewares/authMiddlewasare.js";
 
-
 //router Obj
 const router = express.Router();
 
@@ -34,12 +33,16 @@ router.get("/admin-auth", requireSignIn, isAdmin, (req, res) => {
   res.status(200).send({ ok: true });
 });
 //Orders
-router.get('/orders', requireSignIn, getOrdersController)
+router.get("/orders", requireSignIn, getOrdersController);
 //All-Orders
-router.get('/allorders', requireSignIn,isAdmin, getAllOrdersController)
+router.get("/allorders", requireSignIn, isAdmin, getAllOrdersController);
 //All-Orders-status
-router.put('/orderstatus/:orderId', requireSignIn,isAdmin, orderStatusController)
-
+router.put(
+  "/orderstatus/:orderId",
+  requireSignIn,
+  isAdmin,
+  orderStatusController
+);
 
 export default router;
 

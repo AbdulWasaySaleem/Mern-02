@@ -61,7 +61,7 @@ const HomePage = () => {
       );
       if (data?.success) {
         setcategories(data?.category);
-        console.log(categories);
+        //console.log(categories);
       }
     } catch (error) {
       console.error(error);
@@ -81,7 +81,7 @@ const HomePage = () => {
       const { data } = await axios.get(
         `http://localhost:8080/api/v1/product/productlist/${page}`
       );
-      console.log(data);
+      //console.log(data);
       setLoading(false);
       setProduct(data?.products);
     } catch (error) {

@@ -54,7 +54,6 @@ const AdminOrders = () => {
             <AdminMenu />
           </div>
           <div className="col-md-9">
-            <h1 className="text-center">ALl Orders</h1>
             <h1 className="text-2xl font-semibold m-4 ">All Orders</h1>
 
             {orders?.map((o, i) => (
@@ -62,13 +61,28 @@ const AdminOrders = () => {
                 <table className="table">
                   <thead>
                     <tr>
-                      <td scope="col">#</td>
-                      <td scope="col">Product</td>
-                      <td scope="col">Status</td>
-                      <td scope="col">Buyer</td>
-                      <td scope="col">Orders</td>
-                      <td scope="col">Payment</td>
-                      <td scope="col">Quantity</td>
+                      <td style={{ width: "5%" }} scope="col">
+                        #
+                      </td>{" "}
+                      {/* Set width for each column */}
+                      <td style={{ width: "20%" }} scope="col">
+                        Product
+                      </td>
+                      <td style={{ width: "15%" }} scope="col">
+                        Status
+                      </td>
+                      <td style={{ width: "20%" }} scope="col">
+                        Buyer
+                      </td>
+                      <td style={{ width: "15%" }} scope="col">
+                        Orders
+                      </td>
+                      <td style={{ width: "15%" }} scope="col">
+                        Payment
+                      </td>
+                      <td style={{ width: "10%" }} scope="col">
+                        Quantity
+                      </td>
                     </tr>
                   </thead>
                   <tbody>

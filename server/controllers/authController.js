@@ -2,7 +2,6 @@ import userModel from "../Model/userModel.js";
 import bcrypt from "bcrypt";
 import JWT from "jsonwebtoken";
 import orderModel from "../Model/orderModel.js";
-import products from "../Model/productModel.js";
 
 export const registerController = async (req, res) => {
   try {
@@ -56,7 +55,6 @@ export const registerController = async (req, res) => {
   }
 };
 //Login || POST
-
 export const loginController = async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -185,10 +183,12 @@ export const orderStatusController = async(req,res)=>{
 
 
 
+
+
+
+
 //test
 export const testController = (req, res) => {
   return res.send("pritected route ");
 };
 
-// const hashedpassword = await bcrypt.hash(password, saltround || 10))
-// const compare = bcrpt.compare(password, hashedpassword)
